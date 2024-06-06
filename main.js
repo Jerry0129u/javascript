@@ -267,31 +267,87 @@ true
 
 // OPERATION PART 2
 
-/* 1. 936-г 12д хуваагаад гарсан хариуг 9д хуваахад гарах үлдэгдлийг хэвлэнэ үү.
-
+// 1. 936-г 12д хуваагаад гарсан хариуг 9д хуваахад гарах үлдэгдлийг хэвлэнэ үү.
+/*
 let a = 936, b = 3, c = 9;
 const result =  a / b;
 const answer = result % c;
 console.log(answer)
-*/
 
 
-/* 2. Гараас 0-100 хооронд тоон утга авч тохирох үсгэн тэмдэглэгээгээр онц эсвэл сайн эсэхийг буцаа. 
-(A эсвэл B) 
-*/
 
-let a = prompt("Дүнгийн үнэлгээг оруул")
+// 2. Гараас 0-100 хооронд тоон утга авч тохирох үсгэн тэмдэглэгээгээр онц эсвэл сайн эсэхийг буцаа. (A эсвэл B) 
+
+
+let d = prompt("Дүнгийн үнэлгээг оруул")
 
 if ( a > 90 ){
     console.log("A")
 } else
     console.log("B")
- 
 
-/* 3. Он, сараа гараас оруулахад тухайн сар хэд хоногтой болохыг харуул.
+
+
+// 3 их хувьсагчийг ол
+
+let a = Number(prompt("a хувьсагч: "))
+let b = Number(prompt("b хувьсагч: "))
+
+if (a > b) {
+    console.log('a хувьсагч их байна')
+} else 
+    console.log('b хувьсагч их байна')
+
+
+// 4 их хувьсагчийг ол
+
+let a = Number(prompt("a хувьсагч: "))
+let b = Number(prompt("b хувьсагч: "))
+let c = Number(prompt("c хувьсагч: "))
+
+if (a > b && a > c) {
+    console.log('a хувьсагч их байна')
+} else if  (a < b && a > c) {
+    console.log('b хувьсагч их байна')
+} else 
+    console.log('c хувьсагч их байна')
+
+//5 дээрээсээ хоер дахь хувьсагчийг ол
+
+let a = Number(prompt("a хувьсагч: "))
+let b = Number(prompt("b хувьсагч: "))
+let c = Number(prompt("c хувьсагч: "))
+let d = Number(prompt("d хувьсагч: "))
+
+if ((a > b && a > c && a > d) && (b > c && b > d)) {
+    console.log('b дээрээсээ хоер дахь хувьсагч байна')
+}  else if  ((b > a && b > c && b > d) && (a > c && a > d)) {
+    console.log('a дээрээсээ хоер дахь хувьсагч байна')
+}  else if  (c > a && c > b && c > d) && (d > a && d > b)) {
+    console.log('d дээрээсээ хоер дахь хувьсагч байна')
+}  else if  (d > a && d > b && d > c) && (c > a && c > b)
+    console.log('c дээрээсээ хоер дахь хувьсагч байна')
+    
+
+// 6 Гурвалжин мөн эсэхийг ол
+
+let a = Number(prompt("a хувьсагч: "))
+let b = Number(prompt("b хувьсагч: "))
+let c = Number(prompt("c хувьсагч: "))
+
+if (a + c > b && a + b > c && b + c > a) {
+    console.log('Гурвалжин мөн байна')
+} else 
+    console.log('Гурвалжин биш байна')
 */
 
+// 7 
 
+let a = Number(prompt(' Тоог оруул: '))
+if (a % 2 === 0) {
+    console.log('Тэгш тоо байна')
+} else 
+    console.log('Сондгой тоо байна')
 
 
 

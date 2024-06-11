@@ -339,7 +339,6 @@ if (a + c > b && a + b > c && b + c > a) {
     console.log('Гурвалжин мөн байна')
 } else 
     console.log('Гурвалжин биш байна')
-*/
 
 // 7 
 
@@ -349,5 +348,54 @@ if (a % 2 === 0) {
 } else 
     console.log('Сондгой тоо байна')
 
+   
+// 8
+
+let a = Number(prompt(' Эхний тоог оруул: '))
+let b = Number(prompt(' Хоер дахь тоог оруул: '))
+let c = Number(prompt(' Гурав дахь тоог оруул: '))
+  
+
+
+  // WHILE LOOP 
+
+let dugaar = 0;
+   while (dugaar <  100) {
+   console.log(dugaar + 1, "I love you");
+   dugaar = dugaar + 1;
+   }
+
+// FOR LOOP 
+// for (variable; condition; update) {}
+
+for  (let num = 0; num < 100; num++) 
+    if (num % 3 === 0) {
+        console.log(num, "You look cute today.");
+    } else {
+     console.log(num, "I fancy you" );
+    }
+
+   // 0-с n  хүртэлх тооны нийлбэрийг ол. 
+
+   let n = 0;
+   for (let i = 0; i < 20; i++) { 
+    n = n + i;
+   }
+   console.log("the sum of first number is:" ,n)
+
+   // 1-с 10 хүртэлх тоог хэвлэ.
+
+   for (let sum = 0; sum < 10; sum++) {
+       console.log (sum +1 )
+   }
+   
+
+  // 10-20 хүртэлх тэгш тоонуудын нийлбэрийг ол.
+   let total = 0
+   for (let i = 2; i <= 20; i = i + 2) {
+       total = total + i
+    }
+    console.log("the sum of even num is:", total);
+*/
 
 

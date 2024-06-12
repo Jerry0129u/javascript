@@ -396,6 +396,37 @@ for  (let num = 0; num < 100; num++)
        total = total + i
     }
     console.log("the sum of even num is:", total);
+
 */
+function sumOfNumbers(n, m){
+    let sum = 0;
+for (let i = n; i <= m; i++) {
+    sum = sum + i;
+}
+return sum;
+}
+
+const sumOf3to9 = sumOfNumbers (3, 9);
+
+console.log(sumOf3to9);
+alert(sumOf3to9);
+document.getElementById("output").innerText = sumOf3to9;
+
+
+
+
+function sumOftwoNumbers() {
+    const inputString = document.getElementById("input").value;
+    const n = Number(inputString);
+
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+
+    document.getElementById("output").innerText = sum;
+}
+
+
 
 

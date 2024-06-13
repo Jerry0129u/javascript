@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://unpkg.com/mvp.css">
     
 <body> 
-    <main>
+    <main> 
         <h3>Write your value !</h3>
-        <input placeholder="Enter value..." id="number">
+        <input  placeholder="Enter value..." id="number">
         <button onclick="drawTree();">Make a Cßhiristmas tree</button>
         <button onclick="drawTrangle();">Create Trangle star</button><br>
         <button onclick="drawTrangleStarWithHoleInMiddle();">Create Trangle star WITH HOLE IN middle</button>
@@ -28,69 +28,96 @@ function Restart() {
 }
 
     function drawTree() {
-    const n = Number(document.getElementById("number").value)
-    for( let i = 0; i <= n; i++ ){
-    let star = " ";
+        const n = Number(document.getElementById("number").value)
+
+        let output = '';
+
+        for( let i = 0; i <= n; i++ ){
+            let star = " ";
  
-    for(let k = 1; k <= n - i; k++){
+            for(let k = 1; k <= n - i; k++){
+                star += " ";
+            }
 
-      star += " ";
-    }
+            for(let j=0; j<=i; j++) {
+                star += " *";
+            }
+        
+            output = output + star;
+            output = output + '\n';
 
-    for(let j=0; j<=i; j++) {
-       
-        star += " *";
+            
+        }
+
+        document.getElementById("output").innerText = output;
+
     }
-    console.log(star)
-    document.getElementById("output").innerText = star;
-  }
-}
 
 
 
 function drawTrangle() {
     const n = Number(document.getElementById("number").value)
+
+    let output = '';
+
      for (let i = 1; i <= n; i++) {
-    let star = "* ";
-    console.log(star.repeat(i));
-    
+       let star = "* ";
+   
+
+     output = output + star;
+     output = output + '\n'
+
 }
+    document.getElementById("output").innerText = output;
 }
+
+
+
 
 function drawTrangleOfNumber() {
     const n = Number(document.getElementById("number").value)
      for (let i = 1; i <= n; i++) {
-    let star = "1 ";
+    let star = "1  ";
     console.log(star.repeat(i));
 }
 }
 
 
 
-function drawTrangleStarWithHoleInMiddle() {
+function drawTrangleStarWithHoleInMiddle(count) {
     const n = Number(document.getElementById("number").value)
-for (let i = 1; i <= n; i++) {
-  for (let j = 1; j <= n - i; j++) {
-    document.write("&nbsp&nbsp");
-  }
-  // printing star
-  for (let k = 0; k < 2 * i - 1; k++) {
-    if(i === 1 || i === n) {
-        document.write("*");
+    let stars = "";
+    for (let i = 0; i < count; i++) {
+        stars = stars + "*-";
     }
-    else {
-      if(k === 0 || k === 2 * i - 2) {
-        document.write("*");
-      }
-      else {
-        document.write("&nbsp&nbsp");
-      }
+ return stars;
+}
+
+function drawTrangleStarWithHoleInMiddle(count) {
+    let spaces = "";
+    for (let i = 0; i < count; i++) {
+        spaces = spaces + "-";
     }
-  }
-  document.write("<br>");
-   
+    return spaces;
 }
+
+let result = "";
+
+for (let i = 1; i <+ n; i++) {
+    result = result + drawTrangleStarWithHoleInMiddle(n - i);
+
+    if (i === 1 || i === 2 || i === n) {
+        result = result + drawTrangleStarWithHoleInMiddle(i);
+    } else {
+        result = result + "*-";
+        result = result + drawTrangleStarWithHoleInMiddle(2 * i - 4);
+        result = result + "*-";
+    }
+
+    result = result + "\n";
 }
+
+console.log(result);
 
     </script>
 </body>

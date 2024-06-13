@@ -21,7 +21,7 @@
     </main>
              
     <script > 
-
+/*
 function Restart() {
     
 }
@@ -136,10 +136,47 @@ function drawTrangleStarWithHoleInMiddle(count) {
     return item < 18;
    });
    console.log(minors);
+*/
 
+    
+// arrayOfNumbers гэсэн variable зарлаад дараах тоонуудыг оруул
+    const arrayOfNumbers = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290, 11];
 
+    // Дээрх array доторх тоонуудын нийлбэрийг ол.
+     let sum = 0;
+     for (let i = 0; i < arrayOfNumbers.length; i++ ) {
+     sum += arrayOfNumbers[i];}
+     console.log(sum)
 
+     // Дээрх аrray - ийн хамгийн их тоог ол.
+     // Дээрх аrray - ийн хамгийн бага тоог ол.
+     let maximum = Math.max(...arrayOfNumbers);
+     let minimum = Math.min(...arrayOfNumbers);
+     console.log("maximum number is:", maximum);
+     console.log("minimum number is:", minimum);
    
+     // Дээрх аrray - ийн эхэнд дурын 1 тоог нэм.
+     // Дээрх аrray - ийн төгсгөлд дурын 1 тоог нэм.
+     arrayOfNumbers.unshift("1");
+     arrayOfNumbers.push("22");
+     console.log(arrayOfNumbers);
+
+     // Дээрх array доторх тоонуудын тэгш болон сондгой тоо тус тус хэд байгааг ол.
+     const evenNumbers = arrayOfNumbers.filter(num => num % 2 === 0);
+     const oddNumbers = arrayOfNumbers.filter(num => num % 2 !== 0);
+     console.log("Even Numbers:", evenNumbers);
+     console.log("Odd Numbers:", oddNumbers);
+
+     // studentAges гэсэн хувьсагч зарлаад 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 гэсэн утгуудыг 
+     // оноож тус array-д байгаа бүх тоог 5-аар нэмэгдүүл.
+    const studentAges = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      const increaseBy = 5;
+      for ( let i = 0; i < studentAges.length; i++) {
+        studentAges[i] +=increaseBy;
+      }
+      console.log(studentAges);
+
+
     </script>
 </body>
 </html>                     

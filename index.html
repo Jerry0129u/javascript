@@ -14,7 +14,6 @@
         <button onclick="drawTrangle();">Create Trangle star</button><br>
         <button onclick="drawTrangleStarWithHoleInMiddle();">Create Trangle star WITH HOLE IN middle</button>
         <button onclick="drawTrangleOfNumber();">Draw Trangle NUmber</button>  <br>
-
         <button style="background-color: #f94449; border-color: #f94449;" type="reset" id="number" >Reset value </button> 
         <pre>
             <code id="output"></code>
@@ -76,16 +75,24 @@ function drawTrangle() {
 
 function drawTrangleOfNumber() {
     const n = Number(document.getElementById("number").value)
+
+    let output = '';
+
      for (let i = 1; i <= n; i++) {
     let star = "1  ";
     console.log(star.repeat(i));
+
+      output = output + star;
+     output = output + '\n'
 }
+      document.getElementById("output").innerText = output;
 }
 
 
 
 function drawTrangleStarWithHoleInMiddle(count) {
     const n = Number(document.getElementById("number").value)
+
     let stars = "";
     for (let i = 0; i < count; i++) {
         stars = stars + "*-";
@@ -94,6 +101,7 @@ function drawTrangleStarWithHoleInMiddle(count) {
 }
 
 function drawTrangleStarWithHoleInMiddle(count) {
+    const n = Number(document.getElementById("number").value)
     let spaces = "";
     for (let i = 0; i < count; i++) {
         spaces = spaces + "-";
@@ -101,24 +109,37 @@ function drawTrangleStarWithHoleInMiddle(count) {
     return spaces;
 }
 
-let result = "";
 
-for (let i = 1; i <+ n; i++) {
-    result = result + drawTrangleStarWithHoleInMiddle(n - i);
 
-    if (i === 1 || i === 2 || i === n) {
-        result = result + drawTrangleStarWithHoleInMiddle(i);
-    } else {
-        result = result + "*-";
-        result = result + drawTrangleStarWithHoleInMiddle(2 * i - 4);
-        result = result + "*-";
-    }
+ 
+   const names = ["bayraa", "delger", "urlee", "zolboo", "bold"];   // massive
+   const position = names.indexOf("urlee"); // indexOf zowhon tentsuulj haina
 
-    result = result + "\n";
-}
+   names.pop(); //remove last
+   names.push("Bold");  // add last
+   names.shift(); //remove first
+   names.unshift ("sarnai"); // add first
+   console.log(position);
+   console.log(names);
 
-console.log(result);
 
+
+   const ages = [21, 16, 33, 35, 12];   //massive
+
+   const index = ages.findIndex(function (item) {
+    return item < 18;
+   });
+   console.log(index);
+
+
+   const minors = ages.filter(function (item) {
+    return item < 18;
+   });
+   console.log(minors);
+
+
+
+   
     </script>
 </body>
 </html>                     

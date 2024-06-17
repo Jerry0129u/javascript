@@ -210,25 +210,34 @@ function drawTrangleStarWithHoleInMiddle(count) {
      }
      return sequence;
     }
+
     console.log("Фибоначчийн дараалал:", fibonacciSequence(7));
 
 
      // 2. Pascal's triangle
-     var generate = function(numRows) {
-    const table = [];
-    for (let i = 0; i < numRows; i++) {
-        table[i] = [];
-        table[i][0] = 1;
-        for (let j = 1; j < i; j++) {
-            table[i][j] = table[i-1][j-1] + table[i-1][j]
+     function PascalsTriangle(n) {
+    let output = "";
+    let prevline = [];
+    let currentLine = [];
+
+    for (let i = 0; i < n; i++) {
+        currentLine = [];
+
+        for (let j = 0; j <= i; j++) {
+            if (j === 0 || j === i) {
+                currentLine.push(1);
+            } else {
+                currentLine.push(prevline[j] + prevline[j - 1]);
+            }
         }
-        table[i][i] = 1;
+        prevline = currentLine; 
+        output += currentLine.join(" ");
+        output += "\n";
     }
-    return table;
+    return output;
 }
 
-   
-  
+ console.log('Фаскалын гурвалжин:', '\n', '\n', PascalsTriangle(5));
 
     </script>
 </body>
